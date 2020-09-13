@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 100%;
+}
+.menu{
+    
+    margin: 20px auto 0;
+    /* 마진 이렇게 주면 가운데 정렬됨 유용한듯 */
+    width: 700px;
+    text-align: center;
+}
+.menu_item{
+    
+    display: inline-block;
+    /* inline-block으로 하면 가로 정렬이됨 bolck을 해제하니까
+    */
+    
+}
+.menu_link{
+    display: block;
+    padding: 13px 20px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #444;
+}
+.menu_item:hover .menu_link,
+.menu_item.active .menu_link{
+    color: green;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-width: 700px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.submenu_item{
+    display: inline-block;
+}
+.submenu_link{
+    display: block;
+    padding: 15px 35px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #333;
+}
+.submenu_item:hover .submenu_link,
+.submenu_item.active .submenu_link{
+    font-weight: bold;
+    color: green;
+}
+.submenu_link span{
+    position: relative;
+}
+.submenu_item:hover span:after,
+.submenu_item.active span:after{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: -10px;
+    left: 0;
+    border-bottom: 2px solid green;
+}
